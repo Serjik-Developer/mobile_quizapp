@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "839100209597",
+    "firebase_url": "https://mvvvmapp-default-rtdb.firebaseio.com",
+    "project_id": "mvvvmapp",
+    "storage_bucket": "mvvvmapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839100209597:android:0091639f5b67dd23a35ad4",
+        "android_client_info": {
+          "package_name": "com.example.mvvvmapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUZIGRFEhj1A2_yYifQUPvw4wJ3fdWQ_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839100209597:android:29b0439df6010463a35ad4",
+        "android_client_info": {
+          "package_name": "com.example.quizapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUZIGRFEhj1A2_yYifQUPvw4wJ3fdWQ_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

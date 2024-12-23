@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainQuizActivity"
+    android:padding="16dp">
+
+    <!-- Вопрос -->
+    <TextView
+        android:id="@+id/Question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Здесь будет вопрос"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Поле для ввода текста (InputString) -->
+    <EditText
+        android:id="@+id/InputString"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите ваш ответ"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:background="@drawable/input_background"
+        app:layout_constraintTop_toBottomOf="@id/Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Поле для ввода числа (InputInt) -->
+    <EditText
+        android:id="@+id/InputInt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите число"
+        android:inputType="number"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:background="@drawable/input_background"
+        app:layout_constraintTop_toBottomOf="@id/Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Группа радиокнопок (RadioButton) -->
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Статус ответа -->
+
+    <!-- Объяснение -->
+    <TextView
+        android:id="@+id/status_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="Статус ответа будет здесь"
+        android:textColor="#6B7280"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question" />
+
+    <!-- Кнопка "Проверить ответ" -->
+
+    <TextView
+        android:id="@+id/explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Объяснение правильного ответа"
+        android:textColor="#374151"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/status_ans"
+        app:layout_constraintStart_toStartOf="@+id/status_ans"
+        app:layout_constraintTop_toBottomOf="@id/status_ans" />
+
+    <Button
+        android:id="@+id/check_ans"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3B82F6"
+        android:text="Проверить ответ"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/next_ans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Кнопка "Следующий вопрос" -->
+    <Button
+        android:id="@+id/next_ans"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#10B981"
+        android:text="Следующий вопрос"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
