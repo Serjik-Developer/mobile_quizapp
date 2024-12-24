@@ -114,7 +114,7 @@ class MainQuizActivity : AppCompatActivity() {
                             if (answers_list.isEmpty()) {
                                 findViewById<TextView>(R.id.Question).text = "No answers available"
                             } else {
-                                WRITEALL(type, answers_list)
+                                WRITEALL(type, answers_list,textQ)
                             }
                         }
                         Log.w("ANSWER_LIST", answers_list.toString())
@@ -135,7 +135,7 @@ class MainQuizActivity : AppCompatActivity() {
     }
 
 
-    private fun WRITEALL(type: String, ans: MutableList<Answers>) {
+    private fun WRITEALL(type: String, ans: MutableList<Answers>, textQuest:String) {
         val status_ans = findViewById<TextView>(R.id.status_ans)
         val Question = findViewById<TextView>(R.id.Question)
         val InputString = findViewById<EditText>(R.id.InputString)
@@ -149,14 +149,14 @@ class MainQuizActivity : AppCompatActivity() {
                 InputString.visibility = View.VISIBLE
                 InputInt.visibility = View.GONE
                 RadioGroup.visibility = View.GONE
-                Question.text = ans[0].text
+                Question.text = textQuest
                 InputString.isEnabled=true
             }
             "InputInt" -> {
                 InputString.visibility = View.GONE
                 InputInt.visibility = View.VISIBLE
                 RadioGroup.visibility = View.GONE
-                Question.text = ans[0].text
+                Question.text = textQuest
                 InputInt.isEnabled=true
             }
             "RadioButton" -> {
@@ -184,7 +184,7 @@ class MainQuizActivity : AppCompatActivity() {
                         child.isEnabled=true
                     }
                 }
-                Question.text = ans[0].text
+                Question.text = textQuest
             }
         }
     }
