@@ -153,12 +153,14 @@ class MainQuizActivity : AppCompatActivity() {
                 RadioGroup.visibility = View.GONE
                 Question.text = textQuest
                 InputString.isEnabled=true
+                InputString.setBackgroundResource(R.drawable.input_background)
             }
             "InputInt" -> {
                 InputInt.setText("")
                 InputString.visibility = View.GONE
                 InputInt.visibility = View.VISIBLE
                 InputInt.setBackgroundColor(Color.WHITE)
+                InputInt.setBackgroundResource(R.drawable.input_background)
                 RadioGroup.visibility = View.GONE
                 Question.text = textQuest
                 InputInt.isEnabled=true
