@@ -146,6 +146,8 @@ class MainQuizActivity : AppCompatActivity() {
         status_ans.visibility = View.GONE
         when (type) {
             "InputString" -> {
+                InputString.setText("")
+                InputString.setBackgroundColor(Color.WHITE)
                 InputString.visibility = View.VISIBLE
                 InputInt.visibility = View.GONE
                 RadioGroup.visibility = View.GONE
@@ -153,8 +155,10 @@ class MainQuizActivity : AppCompatActivity() {
                 InputString.isEnabled=true
             }
             "InputInt" -> {
+                InputInt.setText("")
                 InputString.visibility = View.GONE
                 InputInt.visibility = View.VISIBLE
+                InputInt.setBackgroundColor(Color.WHITE)
                 RadioGroup.visibility = View.GONE
                 Question.text = textQuest
                 InputInt.isEnabled=true
